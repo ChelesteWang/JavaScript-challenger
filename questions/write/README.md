@@ -45,3 +45,25 @@ function myNew(cfn, ...args) {
 }
 
 ```
+
+## 实现 Ajax
+
+简易版
+
+```js
+function myAjax(url, ...args) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url, false);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        resolve(xhr.responseText);
+      } else {
+        reject("请求失败");
+      }
+    };
+    xhr.send();
+  });
+}
+
+```
