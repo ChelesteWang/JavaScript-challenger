@@ -31,3 +31,17 @@ function throttle(fn, delay) {
 }
 
 ```
+
+## 实现 new 函数
+
+最简版
+
+```js
+
+function myNew(cfn, ...args) {
+  let newObj = Object.create(cfn.prototype);
+  let res = newObj.apply(this, args);
+  return typeof res == "object" ? res : newObj;
+}
+
+```
