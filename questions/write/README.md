@@ -18,3 +18,16 @@ function debounce(fn, delay) {
 ```
 节流函数实现，每多少秒执行一次
 
+```js
+function throttle(fn, delay) {
+  let lastTime = 0;
+  return function (...args) {
+    let now = +new Date();
+    if (now - lastTime > delay) {
+      lastTime = now;
+      func.apply(this, args);
+    }
+  };
+}
+
+```
