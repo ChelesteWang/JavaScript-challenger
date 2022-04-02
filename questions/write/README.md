@@ -67,3 +67,27 @@ function myAjax(url, ...args) {
 }
 
 ```
+
+### 实现 Promise API
+
+实现 Promise.all
+
+```js
+function myPromiseAll(promiseList) {
+  return new Promise((resolve, reject) => {
+    let result = [];
+    for (promise of promiseList) {
+      Promise.resolve(promise)
+        .then((res) => {
+          result.push(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    }
+    resolve(res);
+  });
+}
+
+```
+
