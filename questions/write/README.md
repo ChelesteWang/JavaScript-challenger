@@ -109,3 +109,13 @@ function myPromiseRace(promiseList) {
 }
 ```
 
+## 数组扁平化
+
+```js
+function flat(arr) {
+  return arr.reduce((pre, cur) => {
+    return pre.concat(Array.isArray(cur) ? flat(cur) : cur);
+  }, []);
+}
+```
+
