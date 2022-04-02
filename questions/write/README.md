@@ -91,3 +91,21 @@ function myPromiseAll(promiseList) {
 
 ```
 
+实现 Promise.race
+
+```js
+function myPromiseRace(promiseList) {
+  return new Promise((resolve, reject) => {
+    for (promise of promiseList) {
+      Promise.resolve(promise)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    }
+  });
+}
+```
+
