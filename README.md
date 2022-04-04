@@ -16,6 +16,8 @@ JavaScript 有序集合操作 - [javascript set](./questions/set/README.md)
 
 JavaScript 手写题 - [JavaScript 手写题](./questions/write/README.md)
 
+JavaScript 设计模式 - [JavaScript 设计模式](./questions/designpattern/README.md)
+
 ## 如何贡献
 
 ex1. 例子(添加题目模板) 以下为添加模板
